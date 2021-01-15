@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<table class="table caption-top">
+  <caption>ข้อมูลไดอารี่</caption>
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">รหัส</th>
+      <th scope="col">ชื่อไดอารี</th>
+      <th scope="col">รายละเอียด</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for post in posts %}
+    <tr>
+      <th scope="row">{{post.id}}</th>
+      <td>{{post.name}}</td>
+      <td>{{post.desc}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
